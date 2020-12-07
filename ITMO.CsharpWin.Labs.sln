@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab01-1", "Lab01-1\Lab01-1.csproj", "{572472D6-9912-41A3-8DDC-2E4E1DE6BC02}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab01-51", "Lab01-1\Lab01-51.csproj", "{572472D6-9912-41A3-8DDC-2E4E1DE6BC02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab01-2", "Lab01-2\Lab01-2.csproj", "{F3930FE1-34FD-48E1-9373-0F4AFB1A6712}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab01-52", "Lab01-2\Lab01-52.csproj", "{F3930FE1-34FD-48E1-9373-0F4AFB1A6712}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab02", "Lab02\Lab02.csproj", "{E88CCC48-D5FE-46E3-8664-EBF9452D0D26}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab02-9", "Lab02\Lab02-9.csproj", "{E88CCC48-D5FE-46E3-8664-EBF9452D0D26}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab04-1", "Lab04-1\TestStandardDialog\Lab04-1.csproj", "{3DA146B5-0430-4078-BFBF-6864F31192E7}"
 EndProject
@@ -20,6 +20,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab05-2", "Lab05-2\PdfReader\Lab05-2.csproj", "{0E203257-1C4B-4073-8B34-83CFE2CCBD86}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab05-3", "Lab05-3\WinAnim\Lab05-3.csproj", "{ACA74214-79CC-489E-BB36-B7ACC107EE8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab03-4", "Lab03-04\Lab03-4.csproj", "{96BE59C3-2ABD-48BE-9F9D-7B43271BF136}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{ACA74214-79CC-489E-BB36-B7ACC107EE8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACA74214-79CC-489E-BB36-B7ACC107EE8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACA74214-79CC-489E-BB36-B7ACC107EE8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96BE59C3-2ABD-48BE-9F9D-7B43271BF136}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96BE59C3-2ABD-48BE-9F9D-7B43271BF136}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96BE59C3-2ABD-48BE-9F9D-7B43271BF136}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96BE59C3-2ABD-48BE-9F9D-7B43271BF136}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

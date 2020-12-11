@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab05-3", "Lab05-3\WinAnim\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab03-4", "Lab03-04\Lab03-4.csproj", "{96BE59C3-2ABD-48BE-9F9D-7B43271BF136}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab05-1", "Lab05-1\WinFormsExcel\Lab05-1.csproj", "{96ED818A-8EFE-47C6-9F2B-D08A1B781B1D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{96BE59C3-2ABD-48BE-9F9D-7B43271BF136}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96BE59C3-2ABD-48BE-9F9D-7B43271BF136}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96BE59C3-2ABD-48BE-9F9D-7B43271BF136}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96ED818A-8EFE-47C6-9F2B-D08A1B781B1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96ED818A-8EFE-47C6-9F2B-D08A1B781B1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96ED818A-8EFE-47C6-9F2B-D08A1B781B1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96ED818A-8EFE-47C6-9F2B-D08A1B781B1D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

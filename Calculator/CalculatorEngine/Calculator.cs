@@ -324,10 +324,10 @@ namespace Calculator
 		// Calculate the roots of a quadratic equation.
 		//
 
-		public static int CalcQuadEquationRoots(int a, int b, int c, out double root1, out double root2)
+		public static int CalcQuadEquationRoots(double a, double b, double c, out double root1, out double root2)
 		{
 
-			int discriminant = b * b - 4 * a * c;
+			double discriminant = b * b - 4 * a * c;
 
 			if (discriminant < 0)
 			{
@@ -336,13 +336,13 @@ namespace Calculator
 			}
 			if (discriminant == 0)
 			{
-				root1 = root2 = (double)(b / 2 * a * -1);
+				root1 = root2 = b / 2 * a * -1;
 				return 0;
 			}
 			else
 			{
-				root1 = (double)((-1 * b + Math.Sqrt(b * b - 4 * a * c)) / (2 * a));
-				root2 = (double)((-1 * b - Math.Sqrt(b * b - 4 * a * c)) / (2 * a));
+				root1 = (double)((-1 * b - Math.Sqrt(b * b - 4 * a * c)) / (2 * a));
+				root2 = (double)((-1 * b + Math.Sqrt(b * b - 4 * a * c)) / (2 * a));
 				return 1;
 			}
 		}

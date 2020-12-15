@@ -29,6 +29,7 @@ namespace SimpleCalculator
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.labelA = new System.Windows.Forms.Label();
             this.labelB = new System.Windows.Forms.Label();
             this.labelC = new System.Windows.Forms.Label();
@@ -39,6 +40,8 @@ namespace SimpleCalculator
             this.buttonSolve = new System.Windows.Forms.Button();
             this.labelEnterCoefficients = new System.Windows.Forms.Label();
             this.buttonCancel = new System.Windows.Forms.Button();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // labelA
@@ -75,6 +78,7 @@ namespace SimpleCalculator
             this.textBoxA.Size = new System.Drawing.Size(70, 22);
             this.textBoxA.TabIndex = 3;
             this.textBoxA.Text = "0";
+            this.textBoxA.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxA_Validating);
             // 
             // textBoxB
             // 
@@ -83,6 +87,7 @@ namespace SimpleCalculator
             this.textBoxB.Size = new System.Drawing.Size(70, 22);
             this.textBoxB.TabIndex = 4;
             this.textBoxB.Text = "0";
+            this.textBoxB.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxB_Validating);
             // 
             // textBoxC
             // 
@@ -91,6 +96,7 @@ namespace SimpleCalculator
             this.textBoxC.Size = new System.Drawing.Size(70, 22);
             this.textBoxC.TabIndex = 5;
             this.textBoxC.Text = "0";
+            this.textBoxC.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxC_Validating);
             // 
             // textBoxAnswer
             // 
@@ -128,6 +134,10 @@ namespace SimpleCalculator
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // QuadEquation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -149,6 +159,7 @@ namespace SimpleCalculator
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QuadEquation";
             this.TopMost = true;
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,5 +177,6 @@ namespace SimpleCalculator
         private System.Windows.Forms.Button buttonSolve;
         private System.Windows.Forms.Label labelEnterCoefficients;
         private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

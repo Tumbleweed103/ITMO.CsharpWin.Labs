@@ -1,5 +1,6 @@
 ﻿using Calculator;
 using System;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace SimpleCalculator
@@ -16,9 +17,9 @@ namespace SimpleCalculator
 
         private void buttonSolve_Click(object sender, EventArgs e)
         {
-            double a = Convert.ToDouble(textBoxA.Text);
-            double b = Convert.ToDouble(textBoxB.Text);
-            double c = Convert.ToDouble(textBoxC.Text);
+            double a = Convert.ToDouble(textBoxA.Text, CultureInfo.InvariantCulture);
+            double b = Convert.ToDouble(textBoxB.Text, CultureInfo.InvariantCulture);
+            double c = Convert.ToDouble(textBoxC.Text, CultureInfo.InvariantCulture);
             int result = CalcEngine.CalcQuadEquationRoots(a, b, c, out root1, out root2);
 
             if (result == 1)
@@ -51,11 +52,11 @@ namespace SimpleCalculator
             {
                 try
                 {
-                    double val = double.Parse(textBoxA.Text);
+                    double val = double.Parse(textBoxA.Text, CultureInfo.InvariantCulture);
                     if (val == 0)
                     {
                         e.Cancel = true;
-                        errorProvider.SetError(textBoxA, "This coefficient can't be 0");
+                        errorProvider.SetError(textBoxA, "Can't be 0");
                     }
                     else
                     {
@@ -82,7 +83,7 @@ namespace SimpleCalculator
             {
                 try
                 {
-                    double val = double.Parse(textBoxB.Text);
+                    double val = double.Parse(textBoxB.Text, CultureInfo.InvariantCulture);
                     e.Cancel = false;
                     errorProvider.Clear();
                 }
@@ -105,7 +106,7 @@ namespace SimpleCalculator
             {
                 try
                 {
-                    double val = double.Parse(textBoxC.Text);
+                    double val = double.Parse(textBoxC.Text, CultureInfo.InvariantCulture);
                     e.Cancel = false;
                     errorProvider.Clear();
                 }

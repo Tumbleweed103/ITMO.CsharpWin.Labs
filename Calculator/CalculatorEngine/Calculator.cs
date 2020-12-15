@@ -2,10 +2,10 @@ using System.Reflection;
 
 namespace Calculator
 {
-
 	using System;
+    using System.Globalization;
 
-	public class CalcEngine
+    public class CalcEngine
 	{
 		//
 		// Operation Constants.
@@ -90,7 +90,7 @@ namespace Calculator
 		{
 			if (stringAnswer != "" && !secondNumberAdded)
 			{
-				firstNumber = System.Convert.ToDouble(stringAnswer);
+				firstNumber = System.Convert.ToDouble(stringAnswer, CultureInfo.InvariantCulture);
 				calcOperation = calcOper;
 				stringAnswer = "";
 				decimalAdded = false;
@@ -107,7 +107,7 @@ namespace Calculator
 
 			if (stringAnswer != "")
 			{
-				numHold = System.Convert.ToDouble(stringAnswer);
+				numHold = System.Convert.ToDouble(stringAnswer, CultureInfo.InvariantCulture);
 				stringAnswer = System.Convert.ToString(numHold * negativeConverter);
 			}
 		
@@ -124,7 +124,7 @@ namespace Calculator
 
 			if (stringAnswer != "")
             {
-				numHold = System.Convert.ToDouble(stringAnswer);
+				numHold = System.Convert.ToDouble(stringAnswer, CultureInfo.InvariantCulture);
 				stringAnswer = Convert.ToString(1 / numHold);
 			}
 
@@ -180,7 +180,7 @@ namespace Calculator
             {
 				try
 				{
-					numHold = System.Convert.ToDouble(stringAnswer);
+					numHold = System.Convert.ToDouble(stringAnswer, CultureInfo.InvariantCulture);
 					square = Math.Sqrt(numHold);
 					if (double.IsNaN(square))
 					{
@@ -212,7 +212,7 @@ namespace Calculator
 
 			if (stringAnswer != "")
 			{
-				numHold = System.Convert.ToDouble(stringAnswer);
+				numHold = System.Convert.ToDouble(stringAnswer, CultureInfo.InvariantCulture);
 				if (numHold >= 0)
 				{
 					cube = Math.Pow(numHold, (1.0 / 3.0));
@@ -238,7 +238,7 @@ namespace Calculator
 
 			if (stringAnswer != "")
 			{
-				numHold = System.Convert.ToDouble(stringAnswer);
+				numHold = System.Convert.ToDouble(stringAnswer, CultureInfo.InvariantCulture);
 				stringAnswer = Convert.ToString(Math.Pow(numHold, 2));
 			}
 
@@ -274,7 +274,7 @@ namespace Calculator
 
 			if (stringAnswer != "")
 			{
-				secondNumber = System.Convert.ToDouble(stringAnswer);
+				secondNumber = System.Convert.ToDouble(stringAnswer, CultureInfo.InvariantCulture);
 				secondNumberAdded = true;
 
 				switch (calcOperation)

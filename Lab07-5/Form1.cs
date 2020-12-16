@@ -45,12 +45,10 @@ namespace Lab07_5
 
         private async void startButton_Click(object sender, EventArgs e)
         {
-            string result;
             try
             {
                 int maxValue = int.Parse(maxTextBox.Text);
-                result = await Calc(maxValue);
-                maxLabel.Text = result.ToString();
+                maxLabel.Text = await Calc(maxValue);
 
             }
             catch (Exception)

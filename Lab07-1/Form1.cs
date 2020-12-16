@@ -17,7 +17,7 @@ namespace Lab07_1
             InitializeComponent();
         }
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void timeTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar))
             {
@@ -26,28 +26,28 @@ namespace Lab07_1
             }
         }
 
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        private void backgroundWorker_DoWork(object sender, DoWorkEventArgs e)
         {
             int i;
             i = int.Parse(e.Argument.ToString());
             for (int j = 1; j <= i; j++)
             {
-                if (backgroundWorker1.CancellationPending)
+                if (backgroundWorker.CancellationPending)
                 {
                     e.Cancel = true;
                     return;
                 }
                 System.Threading.Thread.Sleep(1000);
-                backgroundWorker1.ReportProgress((int)(j * 100 / i));
+                backgroundWorker.ReportProgress((int)(j * 100 / i));
             }
         }
 
-        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        private void backgroundWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            progressBar1.Value = e.ProgressPercentage;
+            progressBar.Value = e.ProgressPercentage;
         }
 
-        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        private void backgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             if (!(e.Cancelled))
                 System.Windows.Forms.MessageBox.Show("Run completed!");
@@ -55,18 +55,18 @@ namespace Lab07_1
                 System.Windows.Forms.MessageBox.Show("Run cancelled");
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void startButton_Click(object sender, EventArgs e)
         {
-            if (!(textBox1.Text == ""))
+            if (!(timeTextBox.Text == ""))
             {
-                int i = int.Parse(textBox1.Text);
-                backgroundWorker1.RunWorkerAsync(i);
+                int i = int.Parse(timeTextBox.Text);
+                backgroundWorker.RunWorkerAsync(i);
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void cancelButton_Click(object sender, EventArgs e)
         {
-            backgroundWorker1.CancelAsync();
+            backgroundWorker.CancelAsync();
         }
     }
 }

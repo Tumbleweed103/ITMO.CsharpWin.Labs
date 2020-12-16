@@ -1,5 +1,5 @@
 ﻿
-namespace Lab07_1
+namespace Lab07_2
 {
     partial class Form1
     {
@@ -35,7 +35,6 @@ namespace Lab07_1
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.startButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
-            this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // timeLabel
@@ -91,14 +90,6 @@ namespace Lab07_1
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
-            // backgroundWorker
-            // 
-            this.backgroundWorker.WorkerReportsProgress = true;
-            this.backgroundWorker.WorkerSupportsCancellation = true;
-            this.backgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker_DoWork);
-            this.backgroundWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker_ProgressChanged);
-            this.backgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker_RunWorkerCompleted);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -125,7 +116,6 @@ namespace Lab07_1
         private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Button cancelButton;
-        private System.ComponentModel.BackgroundWorker backgroundWorker;
     }
 }
 
